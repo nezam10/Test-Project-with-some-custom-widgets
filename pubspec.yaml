@@ -1,0 +1,30 @@
+name: test_project
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=2.18.0 <3.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  intl_phone_number_input: ^0.7.1
+  sqflite: ^2.1.0+1
+  http: ^0.13.5
+  get: 4.6.5
+  flutter: 
+    sdk: flutter
+  shared_preferences: ^2.0.15
+  inner_shadow_widget: ^0.0.3
+
+dev_dependencies: 
+  flutter_lints: ^2.0.0
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
