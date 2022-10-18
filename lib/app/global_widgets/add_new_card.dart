@@ -178,7 +178,6 @@ class CustomCardTextField extends StatelessWidget {
   final TextEditingController? controller;
   final String hintText;
   final TextStyle textStyle;
-
   final TextInputType? keyboardType;
   const CustomCardTextField({
     Key? key,

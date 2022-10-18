@@ -39,7 +39,9 @@ class kycScreen extends StatelessWidget {
                     child: Container(
                       margin: const EdgeInsets.all(15),
                       decoration: const BoxDecoration(
-                          color: Color(0xffFFFFFF), shape: BoxShape.circle),
+                        color: Color(0xffFFFFFF),
+                        shape: BoxShape.circle,
+                      ),
                       child: Container(
                         margin: const EdgeInsets.all(30),
                         decoration: BoxDecoration(

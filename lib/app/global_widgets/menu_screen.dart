@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:test_project/app/global_widgets/kyc_screen.dart';
+import 'package:test_project/app/global_widgets/membership_banefits_screen.dart';
 import 'package:test_project/app/global_widgets/settings.dart';
 
 class MenuScreen extends StatelessWidget {
@@ -174,7 +175,9 @@ class MenuScreen extends StatelessWidget {
                               title: "Kyc",
                             ),
                             CustomListTyle2(
-                              onTap: () {},
+                              onTap: () {
+                                Get.to(() => MembershipBenefitsScreen());
+                              },
                               smallBlackTextStyle500: smallBlackTextStyle500,
                               svgicons: "assets/svg/membership.svg",
                               title: "Membership Benefits",

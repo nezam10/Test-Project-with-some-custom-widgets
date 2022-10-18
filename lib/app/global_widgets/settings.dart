@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:test_project/app/global_widgets/set_passcode_screen.dart';
+import 'package:test_project/app/global_widgets/update_password_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   SettingsScreen({super.key});
@@ -22,13 +24,17 @@ class SettingsScreen extends StatelessWidget {
           child: Column(
             children: [
               CustomListTyle2(
-                onTap: () {},
+                onTap: () {
+                  Get.to(() => SetPasscodeScreen());
+                },
                 smallBlackTextStyle500: BlackTextStyle,
                 assetsImage: "assets/icons/lock.png",
                 title: "Set Passcode",
               ),
               CustomListTyle2(
-                onTap: () {},
+                onTap: () {
+                  Get.to(() => UpdatePasswordScreen());
+                },
                 smallBlackTextStyle500: BlackTextStyle,
                 assetsImage: "assets/icons/lock.png",
                 title: "Update Password",

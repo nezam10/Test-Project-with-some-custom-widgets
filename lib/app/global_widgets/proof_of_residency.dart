@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:test_project/app/global_widgets/upload_photo.dart';
 
 class ProofOfResidency extends StatelessWidget {
   ProofOfResidency({super.key});
 
-  TextStyle BlackTextStyle = const TextStyle(
+  final TextStyle blackTextStyle = const TextStyle(
       fontSize: 17, fontWeight: FontWeight.w600, color: Color(0xff3D2323));
-  TextStyle BlackTextStyleBold = const TextStyle(
+  final TextStyle blackTextStyleBold = const TextStyle(
       fontSize: 24, fontWeight: FontWeight.w600, color: Color(0xff002739));
-  TextStyle whiteTextStyle = const TextStyle(
+  final TextStyle whiteTextStyle = const TextStyle(
       fontSize: 14, fontWeight: FontWeight.w500, color: Color(0xffFFFFFF));
 
   @override
@@ -30,15 +31,29 @@ class ProofOfResidency extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 20, bottom: 20),
-                  child: Text("Proof Of Residencey", style: BlackTextStyleBold),
+                  padding: const EdgeInsets.all(20),
+                  child: Text("Proof Of Residencey", style: blackTextStyleBold),
                 ),
-                CustomListView(),
-                CustomListView(),
-                CustomListView(),
+                const CustomListView(
+                  title: "Passport",
+                  subtitle: "Isshued In USA",
+                  assetImg: "assets/icons/about.png",
+                ),
+                const CustomListView(
+                  title: "Naional Id",
+                  subtitle: "Isshued In USA",
+                  assetImg: "assets/icons/about.png",
+                ),
+                const CustomListView(
+                  title: "Drivers License",
+                  subtitle: "Isshued In USA",
+                  assetImg: "assets/icons/about.png",
+                ),
                 const Spacer(),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => UploadPhotoScreen());
+                  },
                   child: Container(
                     margin: const EdgeInsets.all(15),
                     height: 50,
@@ -62,16 +77,27 @@ class ProofOfResidency extends StatelessWidget {
 }
 
 class CustomListView extends StatelessWidget {
+  final String title;
+  final String? subtitle;
+  final String? assetImg;
   const CustomListView({
     Key? key,
+    required this.title,
+    required this.subtitle,
+    this.assetImg,
   }) : super(key: key);
+
+  final TextStyle blackTextStyle = const TextStyle(
+      fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff3D3D3D));
+  final TextStyle blackTextStyle400 = const TextStyle(
+      fontSize: 14, fontWeight: FontWeight.w400, color: Color(0xff3D3D3D));
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: Color(0xffF9F9F9),
+        color: const Color(0xffF9F9F9),
         borderRadius: BorderRadius.circular(7),
       ),
       child: ListTile(
@@ -83,14 +109,14 @@ class CustomListView extends StatelessWidget {
         leading: Container(
           height: 60,
           width: 60,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color(0xffF6F0E6),
             shape: BoxShape.circle,
           ),
-          child: Image.asset("assets/icons/about.png"),
+          child: Image.asset(assetImg.toString()),
         ),
-        title: Text("title"),
-        subtitle: Text("subtitle"),
+        title: Text(title.toString(), style: blackTextStyle),
+        subtitle: Text(subtitle.toString(), style: blackTextStyle400),
         trailing: const Icon(
           Icons.arrow_forward_ios,
           size: 15,

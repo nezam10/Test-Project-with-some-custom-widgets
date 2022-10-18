@@ -5,6 +5,9 @@ import 'package:test_project/app/global_widgets/add_new_card.dart';
 import 'package:test_project/app/global_widgets/add_withdraw.dart';
 import 'package:test_project/app/global_widgets/custom_card_view.dart';
 import 'package:test_project/app/global_widgets/custom_listtyle.dart';
+import 'package:test_project/app/global_widgets/menu_screen.dart';
+import 'package:test_project/app/global_widgets/mobile_number_reload.dart';
+import 'package:test_project/app/global_widgets/settings.dart';
 
 import '../controllers/check_balance_controller.dart';
 import 'custom_appbar.dart';
@@ -249,6 +252,21 @@ class CheckBalanceView extends GetView<CheckBalanceController> {
             ElevatedButton(
                 onPressed: () {
                   Get.to(() => CustomListTyle());
+                },
+                child: const Text("ListTyle")),
+            ElevatedButton(
+                onPressed: () {
+                  Get.to(() => MobileNumberReload());
+                },
+                child: const Text("MobileNumberReload")),
+            ElevatedButton(
+                onPressed: () {
+                  Get.to(() => MenuScreen());
+                },
+                child: const Text("MenuScreen")),
+            ElevatedButton(
+                onPressed: () {
+                  Get.to(() => SettingsScreen());
                 },
                 child: const Text("ListTyle")),
             // SizedBox(height: 20),
