@@ -119,11 +119,9 @@ class SetPasscodeScreen extends StatelessWidget {
             const SizedBox(height: 30),
             InkWell(
               onTap: () async {
-                //authenticate();
                 bool isAuthenticated = await authenticate();
                 print("isAuthenticated========== $isAuthenticated");
                 if (isAuthenticated) {
-                  //
                   showAlert(context);
                   await Future.delayed(const Duration(milliseconds: 1700), () {
                     Get.back();
@@ -164,7 +162,7 @@ class PasscodeContainer extends StatelessWidget {
         height: 57,
         width: 63,
         decoration: BoxDecoration(
-          color: Color(0xffF3F5F7),
+          color: const Color(0xffF3F5F7),
           borderRadius: BorderRadius.circular(11),
         ),
       ),

@@ -6,7 +6,6 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:test_project/app/global_widgets/submited_screen.dart';
-import 'package:test_project/app/global_widgets/take_photo_screen.dart';
 
 class UploadPhotoScreen extends StatefulWidget {
   UploadPhotoScreen({super.key});

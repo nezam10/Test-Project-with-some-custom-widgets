@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:test_project/app/global_widgets/update_password_screen2.dart';
+import 'package:test_project/app/global_widgets/touch_id_screen2.dart';
 
-class UpdatePasswordScreen extends StatelessWidget {
-  UpdatePasswordScreen({super.key});
+class TouchIdScreen extends StatelessWidget {
+  TouchIdScreen({super.key});
 
   final TextStyle whiteTextStyle = const TextStyle(
       fontSize: 14, fontWeight: FontWeight.w500, color: Color(0xffFFFFFF));
@@ -20,7 +21,7 @@ class UpdatePasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Update Password"),
+        title: const Text("Touch ID"),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -34,51 +35,57 @@ class UpdatePasswordScreen extends StatelessWidget {
                     height: 713,
                     width: Get.width,
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text("Reset Password", style: blackTextStyleBold),
+                        Text("Set-up Touch ID", style: blackTextStyleBold),
                         const SizedBox(height: 5),
                         Text(
-                            "Enter the email associated with your account and we’ll send an email with instructions to reset your password",
+                            "For making your account,more safe and secured,you can add your fingerprint to login in your account.",
                             style: smallBlackTextStyle),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const SizedBox(height: 25),
-                            Text("Email", style: blackTextStyle),
-                            const SizedBox(height: 10),
-                            CreateBoxShap(
-                              color: const Color(0xffF3F5F7),
-                              child: TextField(
-                                keyboardType: TextInputType.emailAddress,
-                                decoration: InputDecoration(
-                                    border: InputBorder.none,
-                                    labelStyle: greyTextStyle400,
-                                    hintStyle: greyTextStyle400,
-                                    hintText: "Email",
-                                    prefixIcon: const ImageIcon(
-                                        AssetImage("assets/icons/email.png"))),
-                              ),
+                        const Spacer(),
+                        Container(
+                          height: 171,
+                          width: 171,
+                          padding: const EdgeInsets.all(30),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              width: 1,
+                              color: const Color(0xffDADADA),
                             ),
+                          ),
+                          child:
+                              SvgPicture.asset("assets/svg/fingerprint2.svg"),
+                        ),
+                        const Spacer(),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
                             const SizedBox(height: 30),
                             InkWell(
                               onTap: () {
-                                Get.to(() => UpdatePasswordScreen2());
+                                Get.to(() => TouchIdScreen2());
                               },
                               child: Container(
                                 height: 50,
-                                width: Get.width,
+                                width: Get.width * 0.6,
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   color: const Color(0xffE19722),
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 child:
-                                    Text("Send Request", style: whiteTextStyle),
+                                    Text("Set up now", style: whiteTextStyle),
                               ),
                             ),
+                            TextButton(
+                              onPressed: () {},
+                              child: Text("Will do it later",
+                                  style: blackTextStyle),
+                            ),
                           ],
-                        )
+                        ),
+                        const Spacer(),
                       ],
                     ),
                   ),

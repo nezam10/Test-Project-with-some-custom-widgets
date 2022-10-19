@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:test_project/app/global_widgets/new_password_screen.dart';
 
 class UpdatePasswordScreen2 extends StatelessWidget {
   UpdatePasswordScreen2({super.key});
@@ -19,7 +20,7 @@ class UpdatePasswordScreen2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Update Password"),
+        title: const Text("Update Password2"),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -31,6 +32,7 @@ class UpdatePasswordScreen2 extends StatelessWidget {
                   padding: const EdgeInsets.all(20),
                   child: SizedBox(
                     height: 713,
+                    width: Get.width,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -71,7 +73,9 @@ class UpdatePasswordScreen2 extends StatelessWidget {
                         ),
                         const SizedBox(height: 30),
                         InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Get.to(() => NewPasswordScreen());
+                          },
                           child: Container(
                             height: 50,
                             width: Get.width,

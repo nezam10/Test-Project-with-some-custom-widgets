@@ -21,7 +21,7 @@ class MembershipBenefitsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        title: const Text("Kyc Screen"),
+        title: const Text("Membership Banefits"),
       ),
       body: Column(
         children: [

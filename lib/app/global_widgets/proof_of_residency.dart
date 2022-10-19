@@ -17,7 +17,7 @@ class ProofOfResidency extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        title: const Text("Kyc Screen"),
+        title: const Text("Froof of Residency"),
       ),
       body: Column(
         children: [

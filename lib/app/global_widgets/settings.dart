@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:test_project/app/global_widgets/about_us_screen.dart';
+import 'package:test_project/app/global_widgets/contact_us_screen.dart';
+import 'package:test_project/app/global_widgets/privacy_notice.dart';
 import 'package:test_project/app/global_widgets/set_passcode_screen.dart';
+import 'package:test_project/app/global_widgets/terms_and_conditions.dart';
+import 'package:test_project/app/global_widgets/touch_id_screen.dart';
 import 'package:test_project/app/global_widgets/update_password_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -16,7 +20,7 @@ class SettingsScreen extends StatelessWidget {
       backgroundColor: Color(0xffF8F8F8),
       appBar: AppBar(
         elevation: 0.0,
-        title: const Text("Menu Screen"),
+        title: const Text("Settings"),
       ),
       body: Card(
         child: Container(
@@ -40,7 +44,9 @@ class SettingsScreen extends StatelessWidget {
                 title: "Update Password",
               ),
               CustomListTyle2(
-                onTap: () {},
+                onTap: () {
+                  Get.to(() => TouchIdScreen());
+                },
                 smallBlackTextStyle500: BlackTextStyle,
                 assetsImage: "assets/icons/enable_touch_id.png",
                 title: "Enable Touch ID",
@@ -52,25 +58,33 @@ class SettingsScreen extends StatelessWidget {
                 title: "Share App",
               ),
               CustomListTyle2(
-                onTap: () {},
+                onTap: () {
+                  Get.to(() => TermsAndConditions());
+                },
                 smallBlackTextStyle500: BlackTextStyle,
                 assetsImage: "assets/icons/terms_conditions.png",
                 title: "Terms & Conditions",
               ),
               CustomListTyle2(
-                onTap: () {},
+                onTap: () {
+                  Get.to(() => PrivacyNoticeScreen());
+                },
                 smallBlackTextStyle500: BlackTextStyle,
                 assetsImage: "assets/icons/privacy.png",
                 title: "Privacy Notice",
               ),
               CustomListTyle2(
-                onTap: () {},
+                onTap: () {
+                  Get.to(() => AboutUsScreen());
+                },
                 smallBlackTextStyle500: BlackTextStyle,
                 assetsImage: "assets/icons/about.png",
                 title: "About Us",
               ),
               CustomListTyle2(
-                onTap: () {},
+                onTap: () {
+                  Get.to(() => ContactUsScreen());
+                },
                 smallBlackTextStyle500: BlackTextStyle,
                 assetsImage: "assets/icons/contact.png",
                 title: "Contact Us",
