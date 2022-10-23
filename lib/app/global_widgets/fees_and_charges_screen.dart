@@ -5,7 +5,7 @@ class FeesAndChargesScreen extends StatelessWidget {
   FeesAndChargesScreen({super.key});
 
   final TextStyle blackTextStyle = const TextStyle(
-      fontSize: 15, fontWeight: FontWeight.w400, color: Color(0xff555454));
+      fontSize: 16, fontWeight: FontWeight.w500, color: Color(0xff555454));
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class FeesAndChargesScreen extends StatelessWidget {
                                 style: blackTextStyle,
                               ),
                             ),
-                            Divider()
+                            const Divider()
                           ],
                         );
                       },

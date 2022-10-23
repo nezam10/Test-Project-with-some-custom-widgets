@@ -19,12 +19,13 @@ class MenuScreen extends StatelessWidget {
       fontSize: 16, fontWeight: FontWeight.w400, color: Color(0xff444242));
   TextStyle smallBlackTextStyle = const TextStyle(
       fontSize: 13, fontWeight: FontWeight.w400, color: Color(0xff4A4A4A));
-  TextStyle smallBlackTextStyle500 = const TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w500, color: Color(0xff444242));
   TextStyle whiteTextStyle = const TextStyle(
       fontSize: 16, fontWeight: FontWeight.w500, color: Color(0xffffffff));
+
+  TextStyle smallBlackTextStyle500 = const TextStyle(
+      fontSize: 16, fontWeight: FontWeight.w400, color: Color(0xff444242));
   TextStyle blackTextStyleBold = const TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w500, color: Color(0xff444242));
+      fontSize: 16, fontWeight: FontWeight.w500, color: Color(0xff444242));
 
   @override
   Widget build(BuildContext context) {
@@ -161,8 +162,8 @@ class MenuScreen extends StatelessWidget {
                       const SizedBox(height: 15),
                       Padding(
                         padding: const EdgeInsets.only(left: 15),
-                        child:
-                            Text("Profile Settings", style: blackTextStyleBold),
+                        child: Text("Profile Settings",
+                            style: Get.textTheme.titleMedium),
                       ),
                       const SizedBox(height: 15),
                       Container(
@@ -171,7 +172,7 @@ class MenuScreen extends StatelessWidget {
                           children: [
                             CustomListTyle2(
                               onTap: () {},
-                              smallBlackTextStyle500: smallBlackTextStyle500,
+                              smallBlackTextStyle500: Get.textTheme.titleSmall!,
                               svgicons: "assets/svg/profile.svg",
                               title: "Profile",
                             ),
