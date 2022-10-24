@@ -25,6 +25,7 @@ dependencies:
     sdk: flutter
   shared_preferences: ^2.0.15
   inner_shadow_widget: ^0.0.3
+  intl_phone_field: ^3.1.0
 
 dev_dependencies: 
   flutter_lints: ^2.0.0

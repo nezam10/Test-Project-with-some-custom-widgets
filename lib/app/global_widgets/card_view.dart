@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:test_project/app/global_widgets/set_pin_screen.dart';
 
 class CardView extends StatelessWidget {
   CardView({super.key});
@@ -149,7 +150,9 @@ class CardView extends StatelessWidget {
                         child: Column(
                           children: [
                             CustomListTyle2(
-                              onTap: () {},
+                              onTap: () {
+                                Get.to(() => SetPinScreen());
+                              },
                               smallBlackTextStyle500: Get.textTheme.titleSmall!,
                               assetsIcon: "assets/icons/transactionsIcon.png",
                               title: "Transactions",

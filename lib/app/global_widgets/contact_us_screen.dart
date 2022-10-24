@@ -78,7 +78,8 @@ class ContactUsScreen extends StatelessWidget {
                               height: 176,
                               color: const Color(0xffF3F5F7),
                               child: TextField(
-                                keyboardType: TextInputType.text,
+                                //keyboardType: TextInputType.text,
+                                textInputAction: TextInputAction.newline,
                                 maxLines: 30,
                                 decoration: InputDecoration(
                                   border: InputBorder.none,

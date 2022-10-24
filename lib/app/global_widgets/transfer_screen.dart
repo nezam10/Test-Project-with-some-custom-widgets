@@ -274,9 +274,7 @@ class TransferScreen extends StatelessWidget {
                       children: [
                         Expanded(
                           child: InkWell(
-                            onTap: () {
-                              Get.to(() => TouchIdScreen());
-                            },
+                            onTap: () {},
                             child: Container(
                               height: 50,
                               width: Get.width,
@@ -292,9 +290,7 @@ class TransferScreen extends StatelessWidget {
                         const SizedBox(width: 10),
                         Expanded(
                           child: InkWell(
-                            onTap: () {
-                              Get.to(() => TouchIdScreen());
-                            },
+                            onTap: () {},
                             child: Container(
                               height: 50,
                               width: Get.width,

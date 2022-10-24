@@ -9,6 +9,7 @@ import 'package:test_project/app/global_widgets/add_withdraw.dart';
 import 'package:test_project/app/global_widgets/card_view.dart';
 import 'package:test_project/app/global_widgets/custom_card_view.dart';
 import 'package:test_project/app/global_widgets/custom_listtyle.dart';
+import 'package:test_project/app/global_widgets/custom_scroll.dart';
 import 'package:test_project/app/global_widgets/email_otp.dart';
 import 'package:test_project/app/global_widgets/flutter_animated.dart';
 import 'package:test_project/app/global_widgets/menu_screen.dart';
@@ -314,6 +315,11 @@ class CheckBalanceView extends GetView<CheckBalanceController> {
                     Get.to(() => FlutterAnimated());
                   },
                   child: const Text("Flutter Animated")),
+              ElevatedButton(
+                  onPressed: () {
+                    Get.to(() => CustomScroll());
+                  },
+                  child: const Text("Scroll")),
               // SizedBox(height: 20),
               // Card(
               //   child: Container(
