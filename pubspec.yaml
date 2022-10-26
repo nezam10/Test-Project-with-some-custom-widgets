@@ -21,11 +21,13 @@ dependencies:
   email_auth: ^1.0.0
   flutter_animate: ^1.0.0
   flutter_animated_button: ^2.0.1
+  persistent_bottom_nav_bar: ^5.0.2
   flutter: 
     sdk: flutter
   shared_preferences: ^2.0.15
   inner_shadow_widget: ^0.0.3
   intl_phone_field: ^3.1.0
+  side_sheet: ^1.0.3
 
 dev_dependencies: 
   flutter_lints: ^2.0.0

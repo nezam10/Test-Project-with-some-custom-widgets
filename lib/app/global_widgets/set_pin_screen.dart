@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:test_project/app/global_widgets/menu_screen.dart';
 
 class SetPinScreen extends StatelessWidget {
   const SetPinScreen({super.key});

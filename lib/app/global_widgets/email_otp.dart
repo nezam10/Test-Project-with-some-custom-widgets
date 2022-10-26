@@ -26,7 +26,7 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
   void initState() {
     super.initState();
     // Initialize the package
-    emailAuth = new EmailAuth(
+    emailAuth = EmailAuth(
       sessionName: "Sample session",
     );
 
@@ -62,7 +62,7 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
           title: const Text('Email Auth sample'),
         ),
         body: Container(
-          margin: EdgeInsets.all(5),
+          margin: const EdgeInsets.all(5),
           child: Center(
               child: Center(
             child: Column(
@@ -71,7 +71,7 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
                   controller: _emailcontroller,
                 ),
                 Card(
-                  margin: EdgeInsets.only(top: 20),
+                  margin: const EdgeInsets.only(top: 20),
                   elevation: 6,
                   child: Container(
                     height: 50,
@@ -79,7 +79,7 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
                     color: Colors.green[400],
                     child: GestureDetector(
                       onTap: sendOtp,
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "Request OTP",
                           style: TextStyle(
@@ -101,13 +101,13 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
                     : Container(height: 1),
                 (submitValid)
                     ? Container(
-                        margin: EdgeInsets.only(top: 20),
+                        margin: const EdgeInsets.only(top: 20),
                         height: 50,
                         width: 200,
                         color: Colors.green[400],
                         child: GestureDetector(
                           onTap: verify,
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "Verify",
                               style: TextStyle(
@@ -119,7 +119,7 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
                           ),
                         ),
                       )
-                    : SizedBox(height: 1)
+                    : const SizedBox(height: 1)
               ],
             ),
           )),

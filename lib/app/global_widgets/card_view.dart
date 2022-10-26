@@ -5,7 +5,7 @@ import 'package:test_project/app/global_widgets/set_pin_screen.dart';
 class CardView extends StatelessWidget {
   CardView({super.key});
 
-  TextStyle BlackTextStyle = const TextStyle(
+  TextStyle blackTextStyle = const TextStyle(
       fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff4A4A4A));
   TextStyle mediumBlackTextStyle = const TextStyle(
       fontSize: 16, fontWeight: FontWeight.w400, color: Color(0xff444242));
@@ -46,7 +46,7 @@ class CardView extends StatelessWidget {
                             Row(
                               children: [
                                 Text("Blance : ", style: labelTextStyle),
-                                Text("USD 10.00", style: BlackTextStyle),
+                                Text("USD 10.00", style: blackTextStyle),
                               ],
                             ),
                             Image.asset("assets/icons/balance.png")
@@ -101,7 +101,6 @@ class CardView extends StatelessWidget {
                                 SizedBox(
                                   height: 38,
                                   width: 64,
-                                  //color: Colors.red,
                                   child: Image.asset(
                                     "assets/icons/masterCardIcon.png",
                                     fit: BoxFit.fill,
@@ -126,7 +125,7 @@ class CardView extends StatelessWidget {
                                 ),
                                 onPressed: () {},
                                 icon: Image.asset("assets/icons/sendIcon.png"),
-                                label: Text("Send To", style: BlackTextStyle)),
+                                label: Text("Send To", style: blackTextStyle)),
                           ),
                           const SizedBox(width: 10),
                           Expanded(
@@ -137,7 +136,7 @@ class CardView extends StatelessWidget {
                                   backgroundColor: const Color(0xffF5E7D0)),
                               onPressed: () {},
                               icon: Image.asset("assets/icons/addIcon.png"),
-                              label: Text("Send To", style: BlackTextStyle),
+                              label: Text("Send To", style: blackTextStyle),
                             ),
                           ),
                         ],
@@ -151,7 +150,7 @@ class CardView extends StatelessWidget {
                           children: [
                             CustomListTyle2(
                               onTap: () {
-                                Get.to(() => SetPinScreen());
+                                Get.to(() => const SetPinScreen());
                               },
                               smallBlackTextStyle500: Get.textTheme.titleSmall!,
                               assetsIcon: "assets/icons/transactionsIcon.png",

@@ -15,6 +15,7 @@ import 'package:test_project/app/global_widgets/flutter_animated.dart';
 import 'package:test_project/app/global_widgets/menu_screen.dart';
 import 'package:test_project/app/global_widgets/mobile_number_reload.dart';
 import 'package:test_project/app/global_widgets/settings.dart';
+import 'package:test_project/app/global_widgets/test_widgets/side_sheet.dart';
 import 'package:test_project/app/global_widgets/transfer_screen.dart';
 
 import '../controllers/check_balance_controller.dart';
@@ -320,6 +321,11 @@ class CheckBalanceView extends GetView<CheckBalanceController> {
                     Get.to(() => CustomScroll());
                   },
                   child: const Text("Scroll")),
+              ElevatedButton(
+                  onPressed: () {
+                    Get.to(() => CusmtomBottomBar());
+                  },
+                  child: const Text("Test Widgets")),
               // SizedBox(height: 20),
               // Card(
               //   child: Container(
