@@ -15,9 +15,11 @@ import 'package:test_project/app/global_widgets/flutter_animated.dart';
 import 'package:test_project/app/global_widgets/menu_screen.dart';
 import 'package:test_project/app/global_widgets/mobile_number_reload.dart';
 import 'package:test_project/app/global_widgets/settings.dart';
-import 'package:test_project/app/global_widgets/test_widgets/side_sheet.dart';
+import 'package:test_project/app/global_widgets/test_widgets/custom_list.dart';
+import 'package:test_project/app/global_widgets/test_widgets/get_mac_address.dart';
 import 'package:test_project/app/global_widgets/transfer_screen.dart';
 
+import '../../../global_widgets/test_widgets/bottom_navbar.dart';
 import '../controllers/check_balance_controller.dart';
 import 'custom_appbar.dart';
 
@@ -326,6 +328,16 @@ class CheckBalanceView extends GetView<CheckBalanceController> {
                     Get.to(() => CusmtomBottomBar());
                   },
                   child: const Text("Test Widgets")),
+              ElevatedButton(
+                  onPressed: () {
+                    Get.to(() => TestWidget());
+                  },
+                  child: const Text("Test Widgets")),
+              ElevatedButton(
+                  onPressed: () {
+                    Get.to(() => GetMacAddress());
+                  },
+                  child: const Text("Get Wifi Mac Address")),
               // SizedBox(height: 20),
               // Card(
               //   child: Container(

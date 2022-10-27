@@ -22,6 +22,8 @@ dependencies:
   flutter_animate: ^1.0.0
   flutter_animated_button: ^2.0.1
   persistent_bottom_nav_bar: ^5.0.2
+  network_info_plus: ^3.0.1
+  wifi_info_plugin_plus: ^2.0.2
   flutter: 
     sdk: flutter
   shared_preferences: ^2.0.15
