@@ -18,6 +18,8 @@ import 'package:test_project/app/global_widgets/settings.dart';
 import 'package:test_project/app/global_widgets/test_widgets/custom_list.dart';
 import 'package:test_project/app/global_widgets/test_widgets/get_mac_address.dart';
 import 'package:test_project/app/global_widgets/transfer_screen.dart';
+import 'package:test_project/app/widget_test/pathao_points.dart';
+import 'package:test_project/app/widget_test/user_level.dart';
 
 import '../../../global_widgets/test_widgets/bottom_navbar.dart';
 import '../controllers/check_balance_controller.dart';
@@ -338,6 +340,16 @@ class CheckBalanceView extends GetView<CheckBalanceController> {
                     Get.to(() => GetMacAddress());
                   },
                   child: const Text("Get Wifi Mac Address")),
+              ElevatedButton(
+                  onPressed: () {
+                    Get.to(() => UserLevelPage());
+                  },
+                  child: const Text("user level")),
+              ElevatedButton(
+                  onPressed: () {
+                    Get.to(() => PathoPointsPage());
+                  },
+                  child: const Text("Pathao points")),
               // SizedBox(height: 20),
               // Card(
               //   child: Container(
