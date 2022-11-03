@@ -17,6 +17,9 @@ import 'package:test_project/app/global_widgets/mobile_number_reload.dart';
 import 'package:test_project/app/global_widgets/settings.dart';
 import 'package:test_project/app/global_widgets/test_widgets/custom_list.dart';
 import 'package:test_project/app/global_widgets/test_widgets/get_mac_address.dart';
+import 'package:test_project/app/global_widgets/test_widgets/make_payment.dart';
+import 'package:test_project/app/global_widgets/test_widgets/paypal_payment.dart';
+import 'package:test_project/app/global_widgets/test_widgets/test_paypal.dart';
 import 'package:test_project/app/global_widgets/transfer_screen.dart';
 
 import '../../../global_widgets/test_widgets/bottom_navbar.dart';
@@ -338,6 +341,17 @@ class CheckBalanceView extends GetView<CheckBalanceController> {
                     Get.to(() => GetMacAddress());
                   },
                   child: const Text("Get Wifi Mac Address")),
+              ElevatedButton(
+                  onPressed: () {
+                    Get.to(() => MakePayment());
+                  },
+                  child: const Text("PayPal")),
+              //
+              ElevatedButton(
+                  onPressed: () {
+                    Get.to(() => TestWidget1());
+                  },
+                  child: const Text("Test Widget")),
               // SizedBox(height: 20),
               // Card(
               //   child: Container(
