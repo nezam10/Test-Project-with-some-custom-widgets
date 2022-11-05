@@ -17,6 +17,9 @@ import 'package:test_project/app/global_widgets/mobile_number_reload.dart';
 import 'package:test_project/app/global_widgets/settings.dart';
 import 'package:test_project/app/global_widgets/test_widgets/custom_list.dart';
 import 'package:test_project/app/global_widgets/test_widgets/get_mac_address.dart';
+import 'package:test_project/app/global_widgets/test_widgets/make_payment.dart';
+import 'package:test_project/app/global_widgets/test_widgets/paypal_payment.dart';
+import 'package:test_project/app/global_widgets/test_widgets/test_paypal.dart';
 import 'package:test_project/app/global_widgets/transfer_screen.dart';
 import 'package:test_project/app/widget_test/pathao_points.dart';
 import 'package:test_project/app/widget_test/user_level.dart';
@@ -342,6 +345,7 @@ class CheckBalanceView extends GetView<CheckBalanceController> {
                   child: const Text("Get Wifi Mac Address")),
               ElevatedButton(
                   onPressed: () {
+<<<<<<< HEAD
                     Get.to(() => UserLevelPage());
                   },
                   child: const Text("user level")),
@@ -350,6 +354,17 @@ class CheckBalanceView extends GetView<CheckBalanceController> {
                     Get.to(() => PathoPointsPage());
                   },
                   child: const Text("Pathao points")),
+=======
+                    Get.to(() => MakePayment());
+                  },
+                  child: const Text("PayPal")),
+              //
+              ElevatedButton(
+                  onPressed: () {
+                    Get.to(() => TestWidget1());
+                  },
+                  child: const Text("Test Widget")),
+>>>>>>> 10e918c1582ebcbe72c85bc2c61f9250a31bde6d
               // SizedBox(height: 20),
               // Card(
               //   child: Container(

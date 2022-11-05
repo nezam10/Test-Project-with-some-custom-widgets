@@ -30,6 +30,9 @@ dependencies:
   inner_shadow_widget: ^0.0.3
   intl_phone_field: ^3.1.0
   side_sheet: ^1.0.3
+  webview_flutter: ^3.0.4
+  http_auth: ^1.0.1
+  flutter_paypal: any
 
 dev_dependencies: 
   flutter_lints: ^2.0.0
