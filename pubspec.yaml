@@ -33,6 +33,10 @@ dependencies:
   webview_flutter: ^3.0.4
   http_auth: ^1.0.1
   flutter_paypal: any
+  status_change: ^2.0.0
+  geolocator: ^9.0.2
+  custom_timer: ^0.1.2
+  intl: ^0.17.0
 
 dev_dependencies: 
   flutter_lints: ^2.0.0

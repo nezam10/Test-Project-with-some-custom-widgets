@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:test_project/app/global_widgets/test_widgets/test_widget.dart';
 
 class TestWidget1 extends StatelessWidget {
   const TestWidget1({super.key});
 
   @override
   Widget build(BuildContext context) {
+    SingleToneCalss singleToneCalss2 = SingleToneCalss();
+    singleToneCalss2.name = "Ismail";
+    singleToneCalss2.address = "Dhaka";
     return SafeArea(
       child: Scaffold(
         body: Column(
@@ -40,7 +44,9 @@ class TestWidget1 extends StatelessWidget {
                 )
               ],
               backgroundColor: Colors.white,
-            )
+            ),
+            Text(singleToneCalss2.name.toString()),
+            Text(singleToneCalss2.address.toString()),
           ],
         ),
       ),
