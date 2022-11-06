@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
+import 'package:timer_builder/timer_builder.dart';
 
 class AppTestWidget extends StatefulWidget {
   const AppTestWidget({super.key});
@@ -10,18 +12,16 @@ class AppTestWidget extends StatefulWidget {
 
 class _AppTestWidgetState extends State<AppTestWidget> {
   DateTime dateTime = DateTime.now();
-  late int a = 1;
-  void incre() {
-    if (a < 60) {
-      a++;
-    }
+
+  String getSystemTime() {
+    var now = DateTime.now();
+    return DateFormat("HH:mm:ss").format(now);
   }
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    incre();
   }
 
   @override
@@ -58,7 +58,18 @@ class _AppTestWidgetState extends State<AppTestWidget> {
             Container(
               child: Text(
                   "${dateTime.hour}: ${dateTime.minute}: ${dateTime.second}"),
-            )
+            ),
+            TimerBuilder.periodic(const Duration(seconds: 1),
+                builder: (context) {
+              print("${getSystemTime()}");
+              return Text(
+                "${getSystemTime()}",
+                style: const TextStyle(
+                    color: Color(0xff2d386b),
+                    fontSize: 30,
+                    fontWeight: FontWeight.w700),
+              );
+            }),
           ],
         ),
       ),
