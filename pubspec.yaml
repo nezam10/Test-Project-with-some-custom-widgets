@@ -13,7 +13,7 @@ dependencies:
   get: 4.6.5
   flutter_contacts: ^1.1.5
   url_launcher: ^6.1.6
-  flutter_svg: ^1.1.5
+  flutter_svg: any
   dotted_border: ^2.0.0+2
   image_picker: ^0.8.6
   local_auth: ^2.1.2
@@ -38,6 +38,11 @@ dependencies:
   custom_timer: ^0.1.2
   intl: ^0.17.0
   timer_builder: ^2.0.0
+  # dospace: any
+  dospace:
+    git:
+      url: https://github.com/nbspou/dospace.git
+      ref: master # branch name
 
 dev_dependencies: 
   flutter_lints: ^2.0.0
