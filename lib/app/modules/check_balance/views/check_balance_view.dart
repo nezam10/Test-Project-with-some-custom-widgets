@@ -22,6 +22,7 @@ import 'package:test_project/app/global_widgets/test_widgets/test_paypal.dart';
 import 'package:test_project/app/global_widgets/test_widgets/test_widget.dart';
 import 'package:test_project/app/global_widgets/transfer_screen.dart';
 import 'package:test_project/app/widget_test/pathao_points.dart';
+import 'package:test_project/app/widget_test/rating_bar/rating_home.dart';
 import 'package:test_project/app/widget_test/user_level.dart';
 
 import '../../../global_widgets/test_widgets/bottom_navbar.dart';
@@ -364,7 +365,12 @@ class CheckBalanceView extends GetView<CheckBalanceController> {
                   onPressed: () {
                     Get.to(() => AppTestWidget());
                   },
-                  child: const Text("App Test Widget"))
+                  child: const Text("App Test Widget")),
+              ElevatedButton(
+                  onPressed: () {
+                    Get.to(() => RatingHome());
+                  },
+                  child: const Text("Rating")),
               // SizedBox(height: 20),
               // Card(
               //   child: Container(

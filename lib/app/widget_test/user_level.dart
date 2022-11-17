@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:test_project/app/widget_test/rating_bar/rating_bar.dart';
 
-class UserLevelPage extends StatelessWidget {
+class UserLevelPage extends StatefulWidget {
   const UserLevelPage({super.key});
 
+  @override
+  State<UserLevelPage> createState() => _UserLevelPageState();
+}
+
+class _UserLevelPageState extends State<UserLevelPage> {
+  int currentStep = 2;
+  int stepLength = 4;
+  late bool complete;
   @override
   Widget build(BuildContext context) {
     TextStyle blackTextStyle = const TextStyle(
@@ -16,7 +25,19 @@ class UserLevelPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("User Level"),
+        backgroundColor: Colors.white,
+        elevation: 2,
+        leading: IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+        ),
+        title: const Text(
+          "User Level",
+          style: TextStyle(color: Colors.black),
+        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -28,7 +49,7 @@ class UserLevelPage extends StatelessWidget {
                   dense: false,
                   leading: const CircleAvatar(
                     radius: 25,
-                    backgroundImage: AssetImage("assets/icons/help.png"),
+                    backgroundImage: AssetImage("assets/icons/active.png"),
                   ),
                   title: Padding(
                     padding: const EdgeInsets.only(top: 8, bottom: 8),
@@ -74,7 +95,7 @@ class UserLevelPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(5),
                         boxShadow: [
                           BoxShadow(
-                            color: Color.fromRGBO(158, 158, 158, 1)
+                            color: const Color.fromRGBO(158, 158, 158, 1)
                                 .withOpacity(0.2),
                             spreadRadius: 2,
                             blurRadius: 3,
@@ -88,11 +109,12 @@ class UserLevelPage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(15),
-                        child: const CircleAvatar(
+                      child: const Padding(
+                        padding: EdgeInsets.all(15),
+                        child: CircleAvatar(
                           radius: 25,
-                          backgroundImage: AssetImage("assets/icons/help.png"),
+                          backgroundImage:
+                              AssetImage("assets/icons/active.png"),
                         ),
                       ),
                     );
@@ -103,7 +125,7 @@ class UserLevelPage extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Column(
-                      children: [
+                      children: const [
                         Text("Bronze"),
                         Text("0 pts"),
                       ],
@@ -111,32 +133,41 @@ class UserLevelPage extends StatelessWidget {
                   ),
                   Expanded(
                     child: Column(
-                      children: [
-                        Text("Bronze"),
-                        Text("0 pts"),
+                      children: const [
+                        Text("Silver"),
+                        Text("500 pts"),
                       ],
                     ),
                   ),
                   Expanded(
                     child: Column(
-                      children: [
-                        Text("Bronze"),
-                        Text("0 pts"),
+                      children: const [
+                        Text("Gold"),
+                        Text("3000 pts"),
                       ],
                     ),
                   ),
                   Expanded(
                     child: Column(
-                      children: [
-                        Text("Bronze"),
-                        Text("0 pts"),
+                      children: const [
+                        Text("Platinum"),
+                        Text("7000 pts"),
                       ],
                     ),
                   ),
                 ],
               ),
+              NumberStepper(
+                totalSteps: stepLength,
+                width: MediaQuery.of(context).size.width,
+                curStep: currentStep,
+                stepCompleteColor: Colors.green,
+                currentStepColor: Color(0xffdbecff),
+                inactiveColor: Color(0xffdbecff),
+                lineWidth: 5.5,
+              ),
               const SizedBox(height: 20),
-              Text(
+              const Text(
                   "Redeeming points won't affect your progress to the next level"),
               const SizedBox(height: 10),
               Container(
@@ -152,9 +183,10 @@ class UserLevelPage extends StatelessWidget {
                       ListTile(
                         contentPadding: EdgeInsets.zero,
                         dense: false,
-                        leading: const CircleAvatar(
+                        leading: CircleAvatar(
                           radius: 25,
-                          backgroundImage: AssetImage("assets/icons/help.png"),
+                          backgroundImage:
+                              AssetImage("assets/icons/active.png"),
                         ),
                         title: Text(
                             "Earn points with every eligible ride and order"),
@@ -163,9 +195,10 @@ class UserLevelPage extends StatelessWidget {
                       ListTile(
                         contentPadding: EdgeInsets.zero,
                         dense: false,
-                        leading: const CircleAvatar(
+                        leading: CircleAvatar(
                           radius: 25,
-                          backgroundImage: AssetImage("assets/icons/help.png"),
+                          backgroundImage:
+                              AssetImage("assets/icons/active.png"),
                         ),
                         title: Text(
                             "Earn points with every eligible ride and order"),
@@ -177,7 +210,8 @@ class UserLevelPage extends StatelessWidget {
                         leading: CircleAvatar(
                           radius: 25,
                           backgroundColor: Colors.red,
-                          backgroundImage: AssetImage("assets/icons/help.png"),
+                          backgroundImage:
+                              AssetImage("assets/icons/active.png"),
                         ),
                         title: Text(
                             "Earn points with every eligible ride and order"),
@@ -186,9 +220,10 @@ class UserLevelPage extends StatelessWidget {
                       ListTile(
                         contentPadding: EdgeInsets.zero,
                         dense: false,
-                        leading: const CircleAvatar(
+                        leading: CircleAvatar(
                           radius: 25,
-                          backgroundImage: AssetImage("assets/icons/help.png"),
+                          backgroundImage:
+                              AssetImage("assets/icons/active.png"),
                         ),
                         title: Text(
                             "Earn points with every eligible ride and order"),
@@ -197,9 +232,10 @@ class UserLevelPage extends StatelessWidget {
                       ListTile(
                         contentPadding: EdgeInsets.zero,
                         dense: false,
-                        leading: const CircleAvatar(
+                        leading: CircleAvatar(
                           radius: 25,
-                          backgroundImage: AssetImage("assets/icons/help.png"),
+                          backgroundImage:
+                              AssetImage("assets/icons/active.png"),
                         ),
                         title: Text(
                             "Earn points with every eligible ride and order"),
@@ -208,9 +244,10 @@ class UserLevelPage extends StatelessWidget {
                       ListTile(
                         contentPadding: EdgeInsets.zero,
                         dense: false,
-                        leading: const CircleAvatar(
+                        leading: CircleAvatar(
                           radius: 25,
-                          backgroundImage: AssetImage("assets/icons/help.png"),
+                          backgroundImage:
+                              AssetImage("assets/icons/active.png"),
                         ),
                         title: Text(
                             "Earn points with every eligible ride and order"),
@@ -219,9 +256,10 @@ class UserLevelPage extends StatelessWidget {
                       ListTile(
                         contentPadding: EdgeInsets.zero,
                         dense: false,
-                        leading: const CircleAvatar(
+                        leading: CircleAvatar(
                           radius: 25,
-                          backgroundImage: AssetImage("assets/icons/help.png"),
+                          backgroundImage:
+                              AssetImage("assets/icons/active.png"),
                         ),
                         title: Text(
                             "Earn points with every eligible ride and order"),
@@ -230,9 +268,10 @@ class UserLevelPage extends StatelessWidget {
                       ListTile(
                         contentPadding: EdgeInsets.zero,
                         dense: false,
-                        leading: const CircleAvatar(
+                        leading: CircleAvatar(
                           radius: 25,
-                          backgroundImage: AssetImage("assets/icons/help.png"),
+                          backgroundImage:
+                              AssetImage("assets/icons/active.png"),
                         ),
                         title: Text(
                             "Earn points with every eligible ride and order"),
