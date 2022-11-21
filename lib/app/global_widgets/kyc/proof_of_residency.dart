@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:test_project/app/global_widgets/upload_photo.dart';
+import 'package:test_project/app/global_widgets/kyc/upload_photo.dart';
 
 class ProofOfResidency extends StatelessWidget {
   ProofOfResidency({super.key});

@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:test_project/app/global_widgets/faq_screen.dart';
 import 'package:test_project/app/global_widgets/fees_and_charges_screen.dart';
-import 'package:test_project/app/global_widgets/kyc_screen.dart';
+import 'package:test_project/app/global_widgets/kyc/kyc_screen.dart';
 import 'package:test_project/app/global_widgets/membership_banefits_screen.dart';
 import 'package:test_project/app/global_widgets/need_help_screen.dart';
 import 'package:test_project/app/global_widgets/settings.dart';

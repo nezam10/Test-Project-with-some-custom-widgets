@@ -38,6 +38,7 @@ dependencies:
   custom_timer: ^0.1.2
   intl: ^0.17.0
   timer_builder: ^2.0.0
+  connectivity_plus: ^3.0.2
   # dospace: any
   dospace:
     git:

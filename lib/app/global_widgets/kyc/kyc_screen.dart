@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:test_project/app/global_widgets/proof_of_residency.dart';
+import 'package:test_project/app/global_widgets/kyc/kyc_verify.dart';
+import 'package:test_project/app/global_widgets/kyc/proof_of_residency.dart';
 
 class kycScreen extends StatelessWidget {
   kycScreen({super.key});
@@ -61,7 +62,7 @@ class kycScreen extends StatelessWidget {
                 const Spacer(),
                 InkWell(
                   onTap: () {
-                    Get.to(() => ProofOfResidency());
+                    Get.to(() => KycVerify());
                   },
                   child: Container(
                     margin: const EdgeInsets.all(15),

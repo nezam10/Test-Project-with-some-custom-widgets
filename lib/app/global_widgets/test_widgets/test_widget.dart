@@ -8,7 +8,7 @@ import 'package:intl/intl.dart';
 import 'package:test_project/app/global_widgets/test_widgets/stepper_line.dart';
 import 'package:timer_builder/timer_builder.dart';
 
-import '../upload_photo.dart';
+import '../kyc/upload_photo.dart';
 
 class AppTestWidget extends StatefulWidget {
   const AppTestWidget({super.key});

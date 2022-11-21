@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:test_project/app/global_widgets/proof_of_residency.dart';
+import 'package:test_project/app/global_widgets/kyc/proof_of_residency.dart';
 
 class MembershipBenefitsScreen extends StatelessWidget {
   MembershipBenefitsScreen({super.key});
